@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalPro | Next-Gen Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f1f5f9; scroll-behavior: smooth; overflow-x: hidden; }
+        
+        /* Glassmorphism Effect */
+        .glass-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        /* Background Animated Particles */
+        .stars-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
+        .star { position: absolute; background: white; border-radius: 50%; opacity: 0.3; animation: blink 3s infinite ease-in-out; }
+        @keyframes blink { 0%, 100% { opacity: 0.2; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.2); } }
+
+        /* Reveal Animation on Scroll */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="selection:bg-blue-500 selection:text-white">
+
+    <div class="stars-container" id="stars-box"></div>
+
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-slate-950/80 backdrop-blur-xl">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-3 group cursor-pointer">
+                <div class="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-500 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform">
+                    <i class="fas fa-bolt text-white"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tighter text-white">Digital<span class="text-blue-500">Pro</span></span>
+            </div>
+            <div class="hidden md:flex space-x-10 items-center">
+                <a href="#home" class="text-slate-400 hover:text-white transition font-semibold text-sm uppercase tracking-widest">Home</a>
+                <a href="#services" class="text-slate-400 hover:text-white transition font-semibold text-sm uppercase tracking-widest">Services</a>
+                <a href="#team" class="text-slate-400 hover:text-white transition font-semibold text-sm uppercase tracking-widest">Team</a>
+                <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-500 shadow-lg shadow-blue-500/20 transition-all font-bold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center relative pt-20">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex-1 space-y-8 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full animate-pulse">
+                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    <span class="text-blue-400 text-xs font-bold tracking-widest uppercase">Trusted by 500+ Global Brands</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black leading-[1.1] tracking-tighter">
+                    We Build <br> <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Digital Legacy</span>
+                    </h1>
+                <p class="text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Your brand deserves more than just "online presence". We craft high-performance strategies that turn clicks into loyal customers.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-6">
+                    <button class="bg-white text-slate-950 px-10 py-5 rounded-2xl text-lg font-black hover:scale-105 transition-all shadow-2xl">Start Your Journey</button>
+                    <button class="flex items-center gap-3 px-8 py-5 rounded-2xl text-lg font-bold border border-white/10 hover:bg-white/5 transition-all"><i class="fas fa-play text-blue-500"></i> Watch Demo</button>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div class="w-full aspect-square rounded-[4rem] overflow-hidden border border-white/10 rotate-2 hover:rotate-0 transition-all duration-700 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                </div>
+                <div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-3xl animate-bounce duration-[5000ms]">
+                    <p class="text-4xl font-black text-white">99%</p>
+                    <p class="text-blue-400 text-xs font-bold tracking-widest uppercase">Success Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-slate-950/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24 reveal">
+                <h2 class="text-5xl md:text-7xl font-black mb-6">Premium Services</h2>
+                <p class="text-slate-400 text-xl max-w-2xl mx-auto">We don't offer generic solutions. We provide high-impact results.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="glass-card p-12 rounded-[3rem] hover:border-blue-500/50 transition-all group reveal">
+                    <div class="w-20 h-20 bg-blue-600/10 border border-blue-500/20 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-search-location text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Precision SEO</h3>
+                    <p class="text-slate-400 leading-relaxed font-medium">Be the first thing your customers see. We dominate search results using AI-driven insights.</p>
+                </div>
+                <div class="glass-card p-12 rounded-[3rem] hover:border-purple-500/50 transition-all group reveal">
+                    <div class="w-20 h-20 bg-purple-600/10 border border-purple-500/20 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform">
+                        <i class="fab fa-instagram text-3xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Social Hype</h3>
+                    <p class="text-slate-400 leading-relaxed font-medium">Creating viral content and managing elite communities that speak your brand's voice.</p>
+                </div>
+                <div class="glass-card p-12 rounded-[3rem] hover:border-cyan-500/50 transition-all group reveal">
+                    <div class="w-20 h-20 bg-cyan-600/10 border border-cyan-500/20 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-code text-3xl text-cyan-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Web Experience</h3>
+                    <p class="text-slate-400 leading-relaxed font-medium">Lightning-fast, ultra-modern websites designed to convert visitors into die-hard fans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-r from-blue-900/20 to-indigo-900/20 border-y border-white/5">
+        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center reveal">
+            <div><h4 class="text-6xl font-black text-white mb-2">500+</h4><p class="text-blue-400 font-bold uppercase text-xs tracking-widest">Active Partners</p></div>
+            <div><h4 class="text-6xl font-black text-white mb-2">100%</h4><p class="text-blue-400 font-bold uppercase text-xs tracking-widest">Client Satisfaction</p></div>
+            <div><h4 class="text-6xl font-black text-white mb-2">12M</h4><p class="text-blue-400 font-bold uppercase text-xs tracking-widest">Revenue Generated</p></div>
+            <div><h4 class="text-6xl font-black text-white mb-2">10+</h4><p class="text-blue-400 font-bold uppercase text-xs tracking-widest">Awards Won</p></div>
+        </div>
+    </section>
+
+    <section id="team" class="py-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black text-center mb-24 reveal">Meet The Masters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="group reveal">
+                    <div class="relative h-96 rounded-[2.5rem] overflow-hidden mb-6 border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-blue-600/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all">
+                            <i class="fab fa-linkedin text-2xl cursor-pointer"></i>
+                            <i class="fab fa-twitter text-2xl cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold">Ahmed M.</h3>
+                        <p class="text-blue-400 text-sm font-bold uppercase tracking-widest">CEO & Founder</p>
+                    </div>
+                </div>
+                <div class="group reveal" style="transition-delay: 100ms;">
+                    <div class="relative h-96 rounded-[2.5rem] overflow-hidden mb-6 border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-purple-600/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all">
+                            <i class="fab fa-linkedin text-2xl cursor-pointer"></i>
+                            <i class="fab fa-twitter text-2xl cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold">Sarah A.</h3>
+                        <p class="text-purple-400 text-sm font-bold uppercase tracking-widest">SEO Expert</p>
+                    </div>
+                </div>
+                <div class="group reveal" style="transition-delay: 200ms;">
+                    <div class="relative h-96 rounded-[2.5rem] overflow-hidden mb-6 border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"> <div class="absolute inset-0 bg-green-600/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all">
+                            <i class="fab fa-linkedin text-2xl cursor-pointer"></i>
+                            <i class="fab fa-twitter text-2xl cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold">Mohamed L.</h3>
+                        <p class="text-green-400 text-sm font-bold uppercase tracking-widest">Lead Dev</p>
+                    </div>
+                </div>
+                <div class="group reveal" style="transition-delay: 300ms;">
+                    <div class="relative h-96 rounded-[2.5rem] overflow-hidden mb-6 border border-white/5">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-orange-600/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all">
+                            <i class="fab fa-linkedin text-2xl cursor-pointer"></i>
+                            <i class="fab fa-twitter text-2xl cursor-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold">Laila K.</h3>
+                        <p class="text-orange-400 text-sm font-bold uppercase tracking-widest">UX Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-slate-900/50">
+        <div class="container mx-auto px-6">
+            <div class="glass-card rounded-[4rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl reveal">
+                <div class="lg:w-1/3 bg-blue-600 p-16 text-white flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-4xl font-black mb-6">Let's Create <br> History.</h2>
+                        <p class="text-blue-100 mb-12">Stop waiting for miracles. Build one with us.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4"><i class="fas fa-envelope opacity-50"></i> hello@digitalpro.com</div>
+                            <div class="flex items-center gap-4"><i class="fas fa-phone opacity-50"></i> +1 234 567 890</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-12">
+                        <i class="fab fa-facebook text-xl hover:scale-110 cursor-pointer transition"></i>
+                        <i class="fab fa-instagram text-xl hover:scale-110 cursor-pointer transition"></i>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 p-16">
+                    <form class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-blue-500">
+                            <input type="email" placeholder="Your Email" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-blue-500">
+                        </div>
+                        <textarea rows="4" placeholder="How can we help?" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:outline-none focus:border-blue-500"></textarea>
+                        <button class="w-full bg-white text-slate-950 py-5 rounded-2xl font-black text-lg hover:bg-blue-500 hover:text-white transition-all shadow-xl">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-12 border-t border-white/5 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-slate-500 font-bold tracking-widest text-xs uppercase">© 2026 DigitalPro Agency — Crafted for Excellence</p>
+        </div>
+    </footer>
+
+    <script>
+        // Stars Animation
+        const starsBox = document.getElementById('stars-box');
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 3 + 'px';
+            star.style.width = size;
+            star.style.height = size;
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 5 + 's';
+            starsBox.appendChild(star);
+        }
+
+        // Scroll Reveal
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Initial call
+    </script>
+</body>
+</html>
+                        
